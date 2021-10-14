@@ -1,0 +1,98 @@
+part of 'app_pages.dart';
+// DO NOT EDIT. This is code generated via package:get_cli/get_cli.dart
+
+abstract class Routes {
+  Routes._();
+
+  static const HOME = _Paths.HOME;
+  static const DASHBOARD = _Paths.DASHBOARD;
+  static const EMPLOYEE = _Paths.EMPLOYEE;
+  static const ROLE = _Paths.ROLE;
+  static const EXPENDITURE = _Paths.EXPENDITURE;
+  static const ORDER = _Paths.ORDER;
+  static const PRODUCT = _Paths.PRODUCT;
+  static const REPORT = _Paths.REPORT;
+  static const SETTING = _Paths.SETTING;
+  static const LOGIN = _Paths.LOGIN;
+  static const CUSTOMER = _Paths.CUSTOMER;
+  static const ADD_ORDER = _Paths.ADD_ORDER;
+  static const ORDER_ADD = _Paths.ORDER_ADD;
+  static const ORDER_DELIVERED = _Paths.ORDER_DELIVERED;
+  static const ORDER_PENDING = _Paths.ORDER_PENDING;
+  static const ORDER_TODAY = _Paths.ORDER_TODAY;
+  static const ORDER_WEEK = _Paths.ORDER_WEEK;
+  static const ORDER_MONTH = _Paths.ORDER_MONTH;
+  static const ORDER_MONTHLY = _Paths.ORDER_MONTHLY;
+  static const ORDER_WEEKLY = _Paths.ORDER_WEEKLY;
+  static const ORDER_DAILY = _Paths.ORDER_DAILY;
+  static const ORDER_YEARLY = _Paths.ORDER_YEARLY;
+  static const PRODUCT_ADD = _Paths.PRODUCT_ADD;
+  static const EXPENDITURE_ADD = _Paths.EXPENDITURE_ADD;
+  static const EXPENDITURE_MONTHLY = _Paths.EXPENDITURE_MONTHLY;
+  static const EXPENDITURE_DAILY = _Paths.EXPENDITURE_DAILY;
+  static const REPORT_DAILY = _Paths.REPORT_DAILY;
+  static const REPORT_WEEKLY = _Paths.REPORT_WEEKLY;
+  static const REPORT_MONTHLY = _Paths.REPORT_MONTHLY;
+  static const REPORT_YEARLY = _Paths.REPORT_YEARLY;
+  static const CUSTOMER_ADD = _Paths.CUSTOMER_ADD;
+  static const CUSTOMER_BLOCKED = _Paths.CUSTOMER_BLOCKED;
+  static const ROLE_ADD = _Paths.ROLE_ADD;
+  static const SETTING_NOTIFICATION = _Paths.SETTING_NOTIFICATION;
+  static const SETTING_SECURITY = _Paths.SETTING_SECURITY;
+  static const HELP = _Paths.HELP;
+  static const EMPLOYEE_ADD = _Paths.EMPLOYEE_ADD;
+  static const EMPLOYEE_BLOCKED = _Paths.EMPLOYEE_BLOCKED;
+  static const CUSTOMER_ALERTED = _Paths.CUSTOMER_ALERTED;
+  static const OTHERS = _Paths.OTHERS;
+  static const PRODUCT_CATEGORY = _Paths.PRODUCT_CATEGORY;
+  static const CATEGORY = _Paths.CATEGORY;
+  static const CATEGORY_ADD = _Paths.CATEGORY_ADD;
+  static const PRODUCT_CATEGORY_ADD = _Paths.PRODUCT_CATEGORY_ADD;
+}
+
+abstract class _Paths {
+  static const HOME = '/home';
+  static const DASHBOARD = '/dashboard';
+  static const EMPLOYEE = '/employee';
+  static const ROLE = '/role';
+  static const EXPENDITURE = '/expenditure';
+  static const ORDER = '/order';
+  static const PRODUCT = '/product';
+  static const REPORT = '/report';
+  static const SETTING = '/setting';
+  static const LOGIN = '/login';
+  static const CUSTOMER = '/customer';
+  static const ADD_ORDER = '/add-order';
+  static const ORDER_ADD = '/order-add';
+  static const ORDER_DELIVERED = '/order-delivered';
+  static const ORDER_PENDING = '/order-pending';
+  static const ORDER_TODAY = '/order-today';
+  static const ORDER_WEEK = '/order-week';
+  static const ORDER_MONTH = '/order-month';
+  static const ORDER_MONTHLY = '/order-monthly';
+  static const ORDER_WEEKLY = '/order-weekly';
+  static const ORDER_DAILY = '/order-daily';
+  static const ORDER_YEARLY = '/order-yearly';
+  static const PRODUCT_ADD = '/product-add';
+  static const EXPENDITURE_ADD = '/expenditure-add';
+  static const EXPENDITURE_MONTHLY = '/expenditure-monthly';
+  static const EXPENDITURE_DAILY = '/expenditure-daily';
+  static const REPORT_DAILY = '/report-daily';
+  static const REPORT_WEEKLY = '/report-weekly';
+  static const REPORT_MONTHLY = '/report-monthly';
+  static const REPORT_YEARLY = '/report-yearly';
+  static const CUSTOMER_ADD = '/customer-add';
+  static const CUSTOMER_BLOCKED = '/customer-blocked';
+  static const ROLE_ADD = '/role-add';
+  static const SETTING_NOTIFICATION = '/setting-notification';
+  static const SETTING_SECURITY = '/setting-security';
+  static const HELP = '/help';
+  static const EMPLOYEE_ADD = '/employee-add';
+  static const EMPLOYEE_BLOCKED = '/employee-blocked';
+  static const CUSTOMER_ALERTED = '/customer-alerted';
+  static const OTHERS = '/others';
+  static const PRODUCT_CATEGORY = '/product-category';
+  static const CATEGORY = '/category';
+  static const CATEGORY_ADD = '/category-add';
+  static const PRODUCT_CATEGORY_ADD = '/product-category-add';
+}

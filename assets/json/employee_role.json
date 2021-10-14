@@ -1,0 +1,14 @@
+{
+    "id": "1235",
+    "name": "role1",
+    "description": {
+        "dashboard": false,
+        "employees": false,
+        "reports": false,
+        "delivered": false,
+        "settings": false,
+        "products": false,
+        "orders": false
+    },
+    "createdat": "22-07-2021"
+}

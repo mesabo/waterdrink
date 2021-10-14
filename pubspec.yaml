@@ -1,0 +1,56 @@
+name: waterdrink
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  cupertino_icons: ^1.0.2
+  get_cli: ^1.6.0
+  http: any
+  intl: any
+  provider: any
+  shared_preferences: any
+  flutter_offline: any
+  sembast: any
+  firebase_phone_auth_handler: any
+  firebase_auth: any
+  getxfire: any
+  bottom_bar: any
+  responsive_sizer: ^3.0.4+4
+  path_provider: any
+  # permission_handler: any
+  settings_ui: any
+  modal_bottom_sheet: any
+  easy_dynamic_theme: ^2.2.0
+  get_storage: ^2.0.3
+  uuid: ^3.0.0
+  intl_phone_field: ^2.1.0
+  flutter_phoenix: ^1.0.0
+  equatable: any
+  syncfusion_flutter_charts: ^19.2.62
+  syncfusion_flutter_datagrid: ^19.2.62-beta
+  google_fonts: any
+  shimmer: any
+  getwidget: any
+  get: 4.3.8
+  pinput: any
+  awesome_dropdown: any
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_lints: ^1.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  assets:
+    - assets/image/
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/font/Poppins-Regular.ttf
+        - asset: assets/font/Poppins-Regular.ttf
+  uses-material-design: true
