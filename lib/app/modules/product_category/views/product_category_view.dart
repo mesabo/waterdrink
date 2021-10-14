@@ -19,77 +19,95 @@ class ProductCategoryView extends GetView<ProductCategoryController> {
       ),
       body: ListView(
         children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
-            child: SfDataGrid(
-              source: prodcatCTL.prodCatDataSource,
-               columnWidthMode: ColumnWidthMode.auto,
-              columnWidthCalculationRange: ColumnWidthCalculationRange.allRows,
-              verticalScrollPhysics:const AlwaysScrollableScrollPhysics(),
-              isScrollbarAlwaysShown: true,
-              columns: [
-                GridColumn(
-                    columnName: 'id',
-                    width: 10.w,
-                    label: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 5.0),
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          "ID",
-                          overflow: TextOverflow.ellipsis,
-                        ))),
-                GridColumn(
-                    columnName: 'name',
-                    width: 20.w,
-                    label: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 5.0),
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          'Noms',
-                          overflow: TextOverflow.ellipsis,
-                        ))),
-                GridColumn(
-                    columnName: 'description',
-                    width: 30.w,
-                    label: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 5.0),
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          'Description',
-                          overflow: TextOverflow.ellipsis,
-                        ))),
-                GridColumn(
-                    columnName: 'createdat',
-                    width: 25.w,
-                    label: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 5.0),
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          'Createdat',
-                          overflow: TextOverflow.ellipsis,
-                        ))),
-                GridColumn(
-                    columnName: 'updateat',
-                    width: 25.w,
-                    label: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 5.0),
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          'Updateat',
-                          overflow: TextOverflow.ellipsis,
-                        ))),
-                GridColumn(
-                    columnName: 'action',
-                    width: 30.w,
-                    label: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 5.0),
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          'Actions',
-                          overflow: TextOverflow.ellipsis,
-                        ))),
-              ],
-              selectionMode: SelectionMode.multiple,
+          Container(
+            height: 95.h,
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+              child: SfDataGrid(
+                rowsPerPage: 15,
+                source: prodcatCTL.prodCatDataSource,
+                columnWidthMode: ColumnWidthMode.auto,
+                columnWidthCalculationRange:
+                    ColumnWidthCalculationRange.allRows,
+                verticalScrollPhysics: const AlwaysScrollableScrollPhysics(),
+                isScrollbarAlwaysShown: true,
+                tableSummaryRows: [
+                  GridTableSummaryRow(
+                      showSummaryInRow: false,
+                      title: 'Total Catégories: {Name}',
+                      titleColumnSpan: 3,
+                      columns: [
+                        GridSummaryColumn(
+                            name: 'Name',
+                            columnName: 'name',
+                            summaryType: GridSummaryType.count)
+                      ],
+                      position: GridTableSummaryRowPosition.bottom),
+                ],
+                columns: [
+                  GridColumn(
+                      columnName: 'id',
+                      width: 10.w,
+                      label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 5.0),
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            "ID",
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                  GridColumn(
+                      columnName: 'name',
+                      width: 20.w,
+                      label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 5.0),
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Noms',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                  GridColumn(
+                      columnName: 'description',
+                      width: 30.w,
+                      label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 5.0),
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Description',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                  GridColumn(
+                      columnName: 'createdat',
+                      width: 25.w,
+                      label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 5.0),
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Createdat',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                  GridColumn(
+                      columnName: 'updateat',
+                      width: 25.w,
+                      label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 5.0),
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Updateat',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                  GridColumn(
+                      columnName: 'action',
+                      width: 30.w,
+                      label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 5.0),
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Actions',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                ],
+                selectionMode: SelectionMode.multiple,
+              ),
             ),
           ),
         ],

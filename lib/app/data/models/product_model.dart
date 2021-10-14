@@ -3,7 +3,7 @@ class Product {
   String? name;
   String? price;
   String? category;
-  String? enable;
+  var enable;
   String? image;
   String? createdat;
   String? updateat;

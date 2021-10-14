@@ -1,23 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:getxfire/getxfire.dart';
+import 'package:waterdrink/app/modules/product/controllers/product_controller.dart';
 
-import 'package:get/get.dart';
-
-import '../controllers/product_controller.dart';
-
-class ProductView extends GetView<ProductController> {
+class ProductView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('ProductView'),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Text(
-          'ProductView is working',
-          style: TextStyle(fontSize: 20),
+        appBar: AppBar(
+          title: Text('Product View'),
+          centerTitle: true,
         ),
-      ),
-    );
+        body: GetBuilder(
+          builder: (ProductController controller) => ListView(
+            children: [
+              Text(controller.title.value),
+            ],
+          ),
+        ));
   }
 }

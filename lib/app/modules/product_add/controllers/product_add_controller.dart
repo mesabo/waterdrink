@@ -4,10 +4,16 @@ import 'package:get/get.dart';
 class ProductAddController extends GetxController {
   final nameTC = TextEditingController();
   final priceTC = TextEditingController();
-  final categoryTC = 'Choisir'.obs;
+  final categoryTC = 'Fruits'.obs;
 
-  var categories =
-      ['Apple', 'Banana', 'Grapes', 'Orange', 'watermelon', 'Pineapple'].obs;
+var categories = [
+                    'Apple',
+                    'Banana',
+                    'Grapes',
+                    'Orange',
+                    'watermelon',
+                    'Pineapple'
+                  ].obs;
   @override
   void onInit() {
     super.onInit();

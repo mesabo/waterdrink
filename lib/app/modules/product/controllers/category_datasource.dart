@@ -3,10 +3,11 @@ import 'package:intl/intl.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:waterdrink/app/data/controllers/product_controllers.dart';
 import 'package:waterdrink/app/data/models/product_category_model.dart';
+import 'package:waterdrink/app/data/models/product_model.dart';
 
-class ProductCategoryDataSource extends DataGridSource {
-  ProductCategoryDataSource({required List<ProductCategory> category}) {
-    dataGridRows = category
+class ProductDataSource extends DataGridSource {
+  ProductDataSource({required List<Product> product}) {
+    dataGridRows = product
         .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
               DataGridCell<Widget>(
                   columnName: 'id',
@@ -15,9 +16,13 @@ class ProductCategoryDataSource extends DataGridSource {
                   columnName: 'name',
                   value: Text(dataGridRow.name.toString(), softWrap: true)),
               DataGridCell<Widget>(
-                  columnName: 'description',
-                  value:
-                      Text(dataGridRow.description.toString(), softWrap: true)),
+                  columnName: 'price',
+                  value: Text(dataGridRow.price.toString(), softWrap: true)),
+              DataGridCell<Widget>(
+                  columnName: 'category',
+                  value: Text(dataGridRow.category.toString(), softWrap: true)),
+              DataGridCell<Widget>(
+                  columnName: 'image', value: Icon(Icons.person)),
               DataGridCell<Widget>(
                   columnName: 'createdat',
                   value:
@@ -29,6 +34,12 @@ class ProductCategoryDataSource extends DataGridSource {
                   columnName: 'action',
                   value: Row(
                     children: [
+                      Switch(
+                        value: dataGridRow.enable,
+                        onChanged: (value) {
+                          dataGridRow.enable = value.toString();
+                        },
+                      ),
                       IconButton(
                         onPressed: () {},
                         icon: Icon(Icons.edit, size: 18),
