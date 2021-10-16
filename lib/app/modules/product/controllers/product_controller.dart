@@ -27,7 +27,7 @@ class ProductController extends GetxController {
         name: 'Grapes',
         price: '500',
         category: 'Fruit',
-        enable: false,
+        enable: true,
         createdat: '2021-10-01',
         updateat: '2021-10-01'),
     Product(
@@ -43,7 +43,7 @@ class ProductController extends GetxController {
         name: 'watermelon',
         price: '2700',
         category: 'Fruit',
-        enable: false,
+        enable: true,
         createdat: '2021-10-01',
         updateat: '2021-10-01'),
     Product(
@@ -51,7 +51,7 @@ class ProductController extends GetxController {
         name: 'Pineapple',
         price: '1500',
         category: 'Fruit',
-        enable: false,
+        enable: true,
         createdat: '2021-10-01',
         updateat: '2021-10-01'),
   ]);

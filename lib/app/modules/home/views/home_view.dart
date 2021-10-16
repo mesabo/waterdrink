@@ -2,6 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:waterdrink/app/data/controllers/customer_controllers.dart';
+import 'package:waterdrink/app/data/controllers/employee_controllers.dart';
+import 'package:waterdrink/app/data/controllers/order_controllers.dart';
+import 'package:waterdrink/app/data/controllers/product_controllers%20copy.dart';
+import 'package:waterdrink/app/data/controllers/product_controllers.dart';
+import 'package:waterdrink/app/data/controllers/report_controllers.dart';
+import 'package:waterdrink/app/data/controllers/role_controllers.dart';
+import 'package:waterdrink/app/data/controllers/setting_controllers.dart';
 import 'package:waterdrink/app/modules/home/views/items.dart';
 import 'package:waterdrink/app/modules/home/views/userinfo_bar.dart';
 import 'package:waterdrink/app/routes/app_pages.dart';
@@ -164,6 +172,7 @@ class HomeView extends GetView<HomeController> {
       children: [
         GridItems(
           ontap: () {
+            orderaddCTL.onInit();
             Get.toNamed(Routes.ORDER_ADD);
           },
           color: Colors.amber.shade900,
@@ -172,6 +181,7 @@ class HomeView extends GetView<HomeController> {
         ),
         GridItems(
           ontap: () {
+            orderpendingCTL.onInit();
             Get.toNamed(Routes.ORDER_DELIVERED);
           },
           color: Colors.amber.shade800,
@@ -180,6 +190,7 @@ class HomeView extends GetView<HomeController> {
         ),
         GridItems(
           ontap: () {
+            orderpendingCTL.onInit();
             Get.toNamed(Routes.ORDER_PENDING);
           },
           color: Colors.amber.shade600,
@@ -188,6 +199,7 @@ class HomeView extends GetView<HomeController> {
         ),
         GridItems(
           ontap: () {
+            orderCTL.onInit();
             Get.toNamed(Routes.ORDER);
           },
           color: Colors.amber.shade500,
@@ -196,6 +208,7 @@ class HomeView extends GetView<HomeController> {
         ),
         GridItems(
             ontap: () {
+              orderdayCTL.onInit();
               Get.toNamed(Routes.ORDER_DAILY);
             },
             color: Colors.amber.shade400,
@@ -203,6 +216,7 @@ class HomeView extends GetView<HomeController> {
             icon: Icons.today_outlined),
         GridItems(
             ontap: () {
+              orderweekCTL.onInit();
               Get.toNamed(Routes.ORDER_WEEK);
             },
             color: Colors.amber.shade300,
@@ -210,6 +224,7 @@ class HomeView extends GetView<HomeController> {
             icon: Icons.view_week_outlined),
         GridItems(
             ontap: () {
+              ordermonthCTL.onInit();
               Get.toNamed(Routes.ORDER_MONTH);
             },
             color: Colors.amber.shade200,
@@ -217,6 +232,7 @@ class HomeView extends GetView<HomeController> {
             icon: Icons.calendar_view_month),
         GridItems(
             ontap: () {
+              orderyearCTL.onInit();
               Get.toNamed(Routes.ORDER_YEARLY);
             },
             color: Colors.amber.shade100,
@@ -237,6 +253,7 @@ class HomeView extends GetView<HomeController> {
       children: [
         GridItems(
           ontap: () {
+            prodaddCTL.onInit();
             Get.toNamed(Routes.PRODUCT_ADD);
           },
           color: Colors.indigo.shade600,
@@ -245,6 +262,7 @@ class HomeView extends GetView<HomeController> {
         ),
         GridItems(
           ontap: () {
+            prodCTL.onInit();
             Get.toNamed(Routes.PRODUCT);
           },
           color: Colors.indigo.shade400,
@@ -253,6 +271,7 @@ class HomeView extends GetView<HomeController> {
         ),
         GridItems(
           ontap: () {
+            prodcataddCTL.onInit();
             Get.toNamed(Routes.PRODUCT_CATEGORY_ADD);
           },
           color: Colors.indigo.shade200,
@@ -261,6 +280,7 @@ class HomeView extends GetView<HomeController> {
         ),
         GridItems(
           ontap: () {
+            prodcatCTL.onInit();
             Get.toNamed(Routes.PRODUCT_CATEGORY);
           },
           color: Colors.indigo.shade50,
@@ -282,6 +302,7 @@ class HomeView extends GetView<HomeController> {
       children: [
         GridItems(
           ontap: () {
+            roleaddCTL.onInit();
             Get.toNamed(Routes.ROLE_ADD);
           },
           color: Colors.cyan.shade600,
@@ -290,6 +311,7 @@ class HomeView extends GetView<HomeController> {
         ),
         GridItems(
           ontap: () {
+            roleCTL.onInit();
             Get.toNamed(Routes.ROLE);
           },
           color: Colors.cyan.shade400,
@@ -311,6 +333,7 @@ class HomeView extends GetView<HomeController> {
       children: [
         GridItems(
           ontap: () {
+            empaddCTL.onInit();
             Get.toNamed(Routes.EMPLOYEE_ADD);
           },
           color: Colors.teal.shade600,
@@ -319,6 +342,7 @@ class HomeView extends GetView<HomeController> {
         ),
         GridItems(
           ontap: () {
+            empCTL.onInit();
             Get.toNamed(Routes.EMPLOYEE);
           },
           color: Colors.teal.shade400,
@@ -327,6 +351,7 @@ class HomeView extends GetView<HomeController> {
         ),
         GridItems(
             ontap: () {
+              empblockedCTL.onInit();
               Get.toNamed(Routes.EMPLOYEE_BLOCKED);
             },
             color: Colors.teal.shade200,
@@ -347,6 +372,7 @@ class HomeView extends GetView<HomeController> {
       children: [
         GridItems(
           ontap: () {
+            settingCTL.onInit();
             Get.toNamed(Routes.SETTING);
           },
           color: Colors.orange.shade800,
@@ -355,6 +381,7 @@ class HomeView extends GetView<HomeController> {
         ),
         GridItems(
           ontap: () {
+            notificationCTL.onInit();
             Get.toNamed(Routes.SETTING_NOTIFICATION);
           },
           color: Colors.orange.shade600,
@@ -363,6 +390,7 @@ class HomeView extends GetView<HomeController> {
         ),
         GridItems(
             ontap: () {
+              securityCTL.onInit();
               Get.toNamed(Routes.SETTING_SECURITY);
             },
             color: Colors.orange.shade400,
@@ -383,6 +411,7 @@ class HomeView extends GetView<HomeController> {
       children: [
         GridItems(
           ontap: () {
+            customeraddCTL.onInit();
             Get.toNamed(Routes.CUSTOMER_ADD);
           },
           color: Colors.pink.shade900,
@@ -391,6 +420,7 @@ class HomeView extends GetView<HomeController> {
         ),
         GridItems(
           ontap: () {
+            customerCTL.onInit();
             Get.toNamed(Routes.CUSTOMER);
           },
           color: Colors.pink.shade700,
@@ -399,6 +429,7 @@ class HomeView extends GetView<HomeController> {
         ),
         GridItems(
             ontap: () {
+              customeralertCTL.onInit();
               Get.toNamed(Routes.CUSTOMER_ALERTED);
             },
             color: Colors.pink.shade500,
@@ -419,6 +450,7 @@ class HomeView extends GetView<HomeController> {
       children: [
         GridItems(
           ontap: () {
+            expaddCTL.onInit();
             Get.toNamed(Routes.EXPENDITURE_ADD);
           },
           color: Colors.blue.shade900,
@@ -427,6 +459,7 @@ class HomeView extends GetView<HomeController> {
         ),
         GridItems(
           ontap: () {
+            expCTL.onInit();
             Get.toNamed(Routes.EXPENDITURE);
           },
           color: Colors.blue.shade700,
@@ -435,6 +468,7 @@ class HomeView extends GetView<HomeController> {
         ),
         GridItems(
           ontap: () {
+            expdayCTL.onInit();
             Get.toNamed(Routes.EXPENDITURE_DAILY);
           },
           color: Colors.blue.shade500,
@@ -443,6 +477,7 @@ class HomeView extends GetView<HomeController> {
         ),
         GridItems(
             ontap: () {
+              expmonthCTL.onInit();
               Get.toNamed(Routes.EXPENDITURE_MONTHLY);
             },
             color: Colors.blue.shade300,
@@ -463,6 +498,7 @@ class HomeView extends GetView<HomeController> {
       children: [
         GridItems(
           ontap: () {
+            repdayCTL.onInit();
             Get.toNamed(Routes.REPORT_DAILY);
           },
           color: Colors.purple.shade900,
@@ -471,6 +507,7 @@ class HomeView extends GetView<HomeController> {
         ),
         GridItems(
           ontap: () {
+            repweekCTL.onInit();
             Get.toNamed(Routes.REPORT_WEEKLY);
           },
           color: Colors.purple.shade700,
@@ -479,6 +516,7 @@ class HomeView extends GetView<HomeController> {
         ),
         GridItems(
             ontap: () {
+              repmonthCTL.onInit();
               Get.toNamed(Routes.REPORT_MONTHLY);
             },
             color: Colors.purple.shade500,
@@ -486,6 +524,7 @@ class HomeView extends GetView<HomeController> {
             icon: Icons.calendar_view_month),
         GridItems(
           ontap: () {
+            repyearCTL.onInit();
             Get.toNamed(Routes.REPORT_YEARLY);
           },
           color: Colors.purple.shade300,
@@ -494,6 +533,7 @@ class HomeView extends GetView<HomeController> {
         ),
         GridItems(
           ontap: () {
+            repCTL.onInit();
             Get.toNamed(Routes.REPORT);
           },
           color: Colors.purple.shade100,

@@ -3,7 +3,7 @@ class Expenditure {
   String? userid;
   String? category;
   String? name;
-  String? amount;
+  var amount;
   String? enable;
   String? createdat;
   String? updateat;
@@ -13,7 +13,7 @@ class Expenditure {
       this.userid,
       this.category,
       this.name,
-      this.amount,
+      this.amount = 0.0,
       this.enable,
       this.createdat,
       this.updateat});

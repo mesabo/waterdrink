@@ -8,7 +8,7 @@ class CustomField1 extends StatelessWidget {
       this.keyboard = TextInputType.name,
       this.action = TextInputAction.next,
       this.controller,
-      this.lines = 1})
+      this.lines = 1,})
       : super(key: key);
 
   final label, hint, keyboard, action, controller, lines;

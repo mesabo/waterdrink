@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:waterdrink/app/data/controllers/product_controllers.dart';
+import 'package:waterdrink/app/data/models/expenditure_model.dart';
 import 'package:waterdrink/app/data/models/product_category_model.dart';
 import 'package:waterdrink/app/data/models/product_model.dart';
 
-class ProductDataSource extends DataGridSource {
-  ProductDataSource({required List<Product> product}) {
-    dataGridRows = product
+class ExpenditureDataSource extends DataGridSource {
+  ExpenditureDataSource({required List<Expenditure> expendditure}) {
+    dataGridRows = expendditure
         .map<DataGridRow>((row) => DataGridRow(cells: [
               DataGridCell<Widget>(
                   columnName: 'id',
@@ -16,14 +17,11 @@ class ProductDataSource extends DataGridSource {
                   columnName: 'name',
                   value: Text(row.name.toString(), softWrap: true)),
               DataGridCell<Widget>(
-                  columnName: 'price',
-                  value: Text(row.price.toString(), softWrap: true)),
+                  columnName: 'amount',
+                  value: Text('${row.amount}', softWrap: true)),
               DataGridCell<Widget>(
                   columnName: 'category',
                   value: Text(row.category.toString(), softWrap: true)),
-              const DataGridCell<Widget>(
-                  columnName: 'image',
-                  value: Icon(Icons.production_quantity_limits)),
               DataGridCell<Widget>(
                   columnName: 'createdat',
                   value: Text(row.createdat.toString(), softWrap: true)),
@@ -34,16 +32,17 @@ class ProductDataSource extends DataGridSource {
                   columnName: 'action',
                   value: Row(
                     children: [
-                      row.enable as bool == true
-                          ? Icon(Icons.circle_sharp, color: Colors.green)
-                          : Icon(Icons.circle_sharp, color: Colors.grey),
                       IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.edit, size: 18),
+                        icon: Icon(
+                          Icons.edit,
+                          size: 18,
+                          color: Colors.grey,
+                        ),
                       ),
                       IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.delete, color: Colors.red, size: 18),
+                        icon: Icon(Icons.delete, color: Colors.amber, size: 18),
                       ),
                     ],
                   )),
@@ -55,21 +54,21 @@ class ProductDataSource extends DataGridSource {
 
   @override
   List<DataGridRow> get rows => dataGridRows;
+
   @override
-  Widget? buildTableSummaryCellWidget(
+  Widget buildTableSummaryCellWidget(
       GridTableSummaryRow summaryRow,
       GridSummaryColumn? summaryColumn,
       RowColumnIndex rowColumnIndex,
       String summaryValue) {
     return Container(
-      padding: EdgeInsets.all(15.0),
+      padding: const EdgeInsets.all(15.0),
       child: Text(summaryValue),
     );
   }
 
   @override
   DataGridRowAdapter buildRow(DataGridRow row) {
-    // print('OK ' + row.getCells().first.columnName);
     return DataGridRowAdapter(
         cells: row
             .getCells()

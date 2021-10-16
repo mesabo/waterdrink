@@ -1,9 +1,22 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ExpenditureAddController extends GetxController {
-  //TODO: Implement ExpenditureAddController
+  final nameTC = TextEditingController();
+  final amountTC = TextEditingController();
 
-  final count = 0.obs;
+  final categoryTC = 'Autre depense'.obs;
+
+  var categories = <String>[
+    'Nourriture',
+        'Carburant',
+    'Communication',
+    'Frais de route',
+    'Matière première',
+        'Réparation',
+    'Salaire',
+    'Autre depense'
+  ].obs;
   @override
   void onInit() {
     super.onInit();
@@ -16,5 +29,4 @@ class ExpenditureAddController extends GetxController {
 
   @override
   void onClose() {}
-  void increment() => count.value++;
 }

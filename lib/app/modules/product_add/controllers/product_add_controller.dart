@@ -5,15 +5,10 @@ class ProductAddController extends GetxController {
   final nameTC = TextEditingController();
   final priceTC = TextEditingController();
   final categoryTC = 'Fruits'.obs;
+  // final active = true.obs;
 
-var categories = [
-                    'Apple',
-                    'Banana',
-                    'Grapes',
-                    'Orange',
-                    'watermelon',
-                    'Pineapple'
-                  ].obs;
+  var categories =
+      ['Apple', 'Banana', 'Grapes', 'Orange', 'watermelon', 'Pineapple'].obs;
   @override
   void onInit() {
     super.onInit();
